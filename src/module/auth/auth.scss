@@ -1,0 +1,96 @@
+.auth-wrap {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(205, 206, 207);
+    .auth-background {
+        width: 100vw;
+        height: 775px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        .de-nav {
+            width: 1240px;
+            display: flex;
+            justify-content: space-between;
+            .de-brand-name {
+                color: red;
+                font-size: 30px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .de-login-button {
+                width: 250px;
+                height: 70px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                border: none;
+                padding: 10px 20px;
+                margin: 4px 2px;
+                border-radius: 40px;
+                border: 2px solid orange;
+                cursor: pointer;
+                font-size: 18px;
+                font-weight: bolder;
+                &:hover {
+                    background-color: orange;
+                    color: white;
+                }
+                .de-metamask-logo {
+                    width: 30px;
+                }
+            }
+        }
+        .auth-container {
+            width: 1240px;
+            display: flex;
+            justify-content: center;
+            .de-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                .de-description {
+                    font-size: 80px;
+                    font-weight: 50;
+                    color: rgb(127, 99, 54);
+                }
+                .de-option {
+                    width: 400px;
+                    height: 60px;
+                    border: 1px solid rgb(172, 172, 172);
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 5px 20px;
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+            }
+            .de-logo {
+                width: 600px;
+                height: 600px;
+            }
+        }
+    }
+    .auth-footer {
+        width: 1240px;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        .de-footer-column {
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 30px;
+            color: rgb(99, 98, 98);
+        }
+    }
+}
