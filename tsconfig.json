@@ -31,8 +31,9 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "src/dekits/ipfs/index.js"  ],
+    "**/*.tsx",
+    "src/dekits/ipfs/index.js"
+  ],
   "exclude": [
     "node_modules"
   ]

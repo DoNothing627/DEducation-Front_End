@@ -8,6 +8,7 @@ import { redirectToLogin } from "@app/services/auth";
 import { useEffect, useState } from "react";
 import { Stat } from "./components/stat";
 import ipfs from "../../dekits/ipfs";
+import { addNewTranscript } from "@app/smart-contract/add-new-transcript";
 
 export function Home() {
   const { isLoggedIn, userInfo } = useSession();
@@ -44,6 +45,16 @@ export function Home() {
       }
       setIpfsHash(res[0].hash);
       console.log("ipfsHash", res[0].hash);
+      try {
+        addNewTranscript(
+          "0x5aa7d58C672282D5F10E98dC5f7d31D73135328F",
+          res[0].hash,
+          "def",
+          "ghi"
+        );
+      } catch (err) {
+        throw err;
+      }
     });
   };
 
