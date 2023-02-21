@@ -1,0 +1,17 @@
+.de-classroom {
+    display: flex;
+    flex-direction: column;
+    // margin-bottom: 100px;
+    height: 100vh;
+    .de-selection {
+        width: 500px;
+        height: 50px;
+        margin-top: 20px;
+        margin-left: 200px;
+        margin-bottom: 20px;
+    }
+    .de-wrap-card {
+        display: flex;
+        margin-left: 200px;
+    }
+}

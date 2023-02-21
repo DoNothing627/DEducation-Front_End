@@ -2,8 +2,11 @@ import { API_END_POINT } from "@app/const/common.const";
 import { Http } from "@app/services/http";
 
 export interface MyProfile {
+  wallet: string;
   username: string;
-  user_id: string;
+  date_of_birth: string;
+  role: string;
+  school: string;
 }
 
 export function myProfile() {

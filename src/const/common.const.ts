@@ -14,6 +14,15 @@ export const ENV: "development" | "production" = process.env.ENV as
 /* tam thoi, sau nay co the update lai */
 export const defaultDEducationLogo = "/assets/images/logo.png";
 export const defaultMetamaskLogo = "/assets/images/metamask-icon.png";
+export const defaultHustLogo = "/assets/images/logo-hust.png";
+export const defaultWinnerBagde = "/assets/images/pngwing.com.png";
+export const defaultExcenllentBagde = "/assets/images/excenllent.png";
+export const defaultPlusSign = "/assets/images/plus-sign.png";
+export const classAIBanner = "/assets/images/class-ai.jpg";
+export const classBlockchainBanner = "/assets/images/class-blockchain.jpg";
+export const classIoTBanner = "/assets/images/class-iot.jpg";
+export const classWebBanner = "/assets/images/class-web.jpg";
+export const classSercurityBanner = "/assets/images/class-sercurity.jpg";
 export const defaultGroupAvatar = "";
 export const limitLogoOrAvatarSize = 10 * 1000000;
 export const limitBannerSize = 10 * 1000000;

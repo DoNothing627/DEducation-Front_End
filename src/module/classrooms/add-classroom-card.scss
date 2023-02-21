@@ -1,0 +1,19 @@
+.add-classroom-card {
+    width: 500px;
+    height: 280px;
+    background-color: rgb(206, 206, 206);
+    float: left;
+    margin-right: 30px;
+    // margin-top: 60px;
+    border-radius: 8px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    opacity: 0.5;
+    cursor: pointer;
+    .de-plus-sign {
+        width: 250px;
+        height: 250px;
+        margin-top: 20px;
+    }
+}

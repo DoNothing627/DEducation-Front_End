@@ -12,6 +12,6 @@ export interface NonceResponseDTO {
 export function getNonce(params: NonceRequestDTO) {
   return Http.request<NonceResponseDTO>({
     method: "GET",
-    url: `${API_END_POINT}/user/${params.wallet}`,
+    url: `${API_END_POINT}/user/nonce/${params.wallet}`,
   });
 }

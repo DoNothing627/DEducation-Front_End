@@ -1,1 +1,2 @@
-export const DEducationContractAddress = "0xB694680256b95338376787FE1938AAB0C9c8F37B";
+export const DEducationContractAddress =
+  "0xF38290025C4067a06C993810364fAabC7fb5c0ef";

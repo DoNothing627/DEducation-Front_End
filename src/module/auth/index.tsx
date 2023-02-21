@@ -10,29 +10,35 @@ import { useEffect, useState } from "react";
 import "./auth.scss";
 import { handleError } from "@app/dekits/error-handler";
 import { verifySignature } from "@app/api/auth/verify-signature";
-import { saveUserCredential } from "@app/services/auth";
+import { getAccessToken, saveUserCredential } from "@app/services/auth";
 import { useRouter } from "next/router";
 
 export function Auth() {
-  const [nonceRequestDTO, setNonceRequestDTO] = useState<NonceRequestDTO>(
-    {} as NonceRequestDTO
-  );
+  // const [nonceRequestDTO, setNonceRequestDTO] = useState<NonceRequestDTO>(
+  //   {} as NonceRequestDTO
+  // );
   const [signer, setSigner] = useState<ethers.providers.JsonRpcSigner>();
   const router = useRouter();
+  var nonceRequestDTO: NonceRequestDTO;
+
+  useEffect(() => {
+    if (getAccessToken()) router.push("/home");
+  });
+
   const getAddress = async () => {
     try {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       const addr = await signer.getAddress();
-      setNonceRequestDTO({ wallet: addr });
+      nonceRequestDTO = { wallet: addr };
       setSigner(signer);
     } catch (err) {
       throw err;
     }
   };
 
-  const handleGetNonce = () => {
-    getAddress();
+  const handleGetNonce = async () => {
+    await getAddress();
     getNonce(nonceRequestDTO).subscribe(async (res) => {
       console.log(res.data);
       try {
@@ -49,6 +55,8 @@ export function Auth() {
         verifySignature(verifySignatureDTO).subscribe((res: any) => {
           console.log(res.data);
           saveUserCredential(res.data.token);
+          localStorage.setItem("user_role", res.data.role);
+          localStorage.setItem("wallet", res.data.wallet);
           router.push("/home");
         });
       } catch (err) {

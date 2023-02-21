@@ -1,0 +1,38 @@
+.de-school-stat-card {
+    width: 630px;
+    height: 170px;
+    border-radius: 8px;
+    padding: 20px;
+    background-image: url("/assets/images/side-card-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 800px 300px;
+    // background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    .de-stat-school-info {
+        display: flex;
+        flex-direction: row;
+        .de-stat-school-avatar {
+            width: 90px;
+            margin-right: 20px;
+        }
+        .de-school-detail-block {
+            display: flex;
+            flex-direction: column;
+            .de-school-stat-name {
+                font-weight: 800;
+                color: #090909;
+                font-size: 30px;
+            }
+            .de-school-wallet {
+                font-weight: 500;
+                color: #090909;
+                font-size: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.de-relationship-container {
+    height: 100vh;
+    .de-relationship-title {
+        font-weight: 800;
+        color: #090909;
+        font-size: 30px;
+        margin-bottom: 12px;
+        margin-left: 200px;
+        margin-top: 30px;
+    }
+    .de-relationship-block {
+        display: flex;
+        max-width: 1500px;
+        margin-left: 200px;
+    }
+}

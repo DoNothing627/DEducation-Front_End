@@ -1,32 +1,44 @@
 .stat-container {
   width: 100%;
-  height: 300px;
+  height: 100vh;
   background-color: rgb(247, 149, 189);
   display: flex;
-  align-items: center;
+  align-items: first baseline;
   justify-content: center;
+  background-image: url("/assets/images/education-background.png");
+  background-size: 1850px 1100px;
 }
 .stat-content {
   width: 1500px;
   height: 250px;
   display: flex;
   flex-direction: column;
+  margin-top: 250px;
 }
 .stat-title {
-  color: white;
-  font-size: 20px;
+  /* color: rgb(42, 42, 42);
+  font-size: 30px;
   margin-bottom: 20px;
-  font-weight: 100px;
+  font-weight: 100px; */
+
+  font-weight: 800;
+  color: #090909;
+  font-size: 30px;
+  margin-bottom: 12px;
 }
 .main-content {
   display: flex;
 }
 .stat-card {
-  width: 450px;
-  height: 160px;
+  width: 530px;
+  height: 300px;
   border-radius: 8px;
   padding: 20px;
-  background-color: brown;
+  /* background-color: brown; */
+  background-image: url("/assets/images/card-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 530px 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -59,6 +71,10 @@
   font-size: 20px;
   font-weight: 80px;
 }
+.field-name {
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+}
 .stat-transcrips {
 }
 .stat-transcrips-title {
@@ -69,7 +85,7 @@
 .stat-bagde {
 }
 .stat-bagde-title {
-  color: white;
-  font-size: 20px;
-  font-weight: 80px;
+  color: rgb(255, 71, 71);
+  font-size: 30px;
+  font-weight: 800px;
 }

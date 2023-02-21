@@ -4,30 +4,40 @@
     "inputs": [
       {
         "indexed": false,
-        "internalType": "address",
-        "name": "_studentAddress",
-        "type": "address"
+        "internalType": "string",
+        "name": "_classroom",
+        "type": "string"
       },
       {
         "indexed": false,
         "internalType": "string",
         "name": "_hashcode",
         "type": "string"
-      },
-      {
-        "indexed": false,
-        "internalType": "string",
-        "name": "_semester",
-        "type": "string"
-      },
-      {
-        "indexed": false,
-        "internalType": "string",
-        "name": "_subject",
-        "type": "string"
       }
     ],
-    "name": "AddNewTranscript",
+    "name": "AddNewTranscriptForClass",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "StudentAddress",
+            "type": "address"
+          },
+          { "internalType": "string", "name": "Classroom", "type": "string" },
+          { "internalType": "string", "name": "HashCode", "type": "string" }
+        ],
+        "indexed": false,
+        "internalType": "struct DEducation.StudentTranscript[]",
+        "name": "_studentTranscripts",
+        "type": "tuple[]"
+      }
+    ],
+    "name": "AddNewTranscriptForStudents",
     "type": "event"
   },
   {
@@ -52,29 +62,52 @@
   {
     "inputs": [
       { "internalType": "address", "name": "", "type": "address" },
-      { "internalType": "address", "name": "", "type": "address" },
       { "internalType": "string", "name": "", "type": "string" }
     ],
-    "name": "TranscriptUploaded",
-    "outputs": [
-      { "internalType": "string", "name": "Semester", "type": "string" },
-      { "internalType": "string", "name": "Subject", "type": "string" }
-    ],
+    "name": "TranscriptForClass",
+    "outputs": [{ "internalType": "string", "name": "", "type": "string" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      {
-        "internalType": "address",
-        "name": "_studentAddress",
-        "type": "address"
-      },
-      { "internalType": "string", "name": "_hashcode", "type": "string" },
-      { "internalType": "string", "name": "_semester", "type": "string" },
-      { "internalType": "string", "name": "_subject", "type": "string" }
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "string", "name": "", "type": "string" }
     ],
-    "name": "addNewTranscript",
+    "name": "TranscriptForStudents",
+    "outputs": [{ "internalType": "string", "name": "", "type": "string" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "string", "name": "_classroom", "type": "string" },
+      { "internalType": "string", "name": "_hashcode", "type": "string" }
+    ],
+    "name": "addNewTranscriptForClass",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "StudentAddress",
+            "type": "address"
+          },
+          { "internalType": "string", "name": "Classroom", "type": "string" },
+          { "internalType": "string", "name": "HashCode", "type": "string" }
+        ],
+        "internalType": "struct DEducation.StudentTranscript[]",
+        "name": "_studentTranscripts",
+        "type": "tuple[]"
+      }
+    ],
+    "name": "addNewTranscriptForStudents",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

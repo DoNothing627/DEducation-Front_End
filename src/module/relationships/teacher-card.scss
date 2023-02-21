@@ -1,0 +1,31 @@
+.de-teacher-stat-card {
+    width: 480px;
+    height: 280px;
+    border-radius: 8px;
+    padding: 20px;
+    background-image: url("/assets/images/side-card-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 530px 300px;
+    // background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    .de-teacher-stat-username {
+        font-weight: 800;
+        color: #090909;
+        font-size: 30px;
+    }
+    // .de-teacher-stat-school {
+    //     font-weight: 800;
+    //     color: #090909;
+    //     font-size: 20px;
+    // }
+    .de-teacher-field-name {
+        font-weight: 800;
+        color: #090909;
+        font-size: 20px;
+    }
+}

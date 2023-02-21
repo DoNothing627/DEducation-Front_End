@@ -1,0 +1,25 @@
+.auth-wrap {
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(127, 99, 54);
+    // position: absolute;
+    bottom: 0;
+    .auth-footer {
+        width: 1240px;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        .de-footer-column {
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 30px;
+            color: rgb(255, 255, 255);
+        }
+    }
+}

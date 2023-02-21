@@ -1,0 +1,59 @@
+.de-transcript-card {
+    width: 500px;
+    height: 400px;
+    // background-color: rgb(255, 255, 255);
+    float: left;
+    // margin-left: 60px;
+    // margin-top: 60px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    .de-image-card {
+        border-radius: 8px;
+        height: 280px;
+    }
+    .field-name-subject {
+        font-weight: 800;
+        color: #090909;
+        font-size: 30px;
+        // margin-bottom: 12px;
+        &:hover {
+            color: rgb(127, 99, 54);
+        }
+    }
+    .field-name-code {
+        font-weight: 200;
+        color: #090909;
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    .field-name-teacher {
+        font-weight: 500;
+        color: #090909;
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    .de-button-block {
+        display: flex;
+        .de-transcript-button {
+            width: 200px;
+            height: 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: none;
+            padding: 10px 20px;
+            margin: 4px 2px;
+            border-radius: 8px;
+            border: 2px solid rgb(127, 99, 54);
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bolder;
+            &:hover {
+                background-color: rgb(127, 99, 54);
+                color: white;
+            }
+        }
+    }
+}
