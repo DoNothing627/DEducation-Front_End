@@ -1,17 +1,53 @@
-.de-classroom {
+.de-classroom-container {
+    width: 100vw;
+    height: auto;
+    background-color: rgb(240, 240, 240);
     display: flex;
     flex-direction: column;
-    // margin-bottom: 100px;
-    height: 100vh;
-    .de-selection {
-        width: 500px;
-        height: 50px;
-        margin-top: 20px;
-        margin-left: 200px;
-        margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    .de-classroom-banner {
+        width: 100vw;
+        height: 17vh;
+        background-image: url("/assets/images/banner-list-courses.png");
+        .de-hightlight-link {
+            margin-top: 30px;
+            width: 150px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 100;
+            color: rgb(90, 90, 255);
+            margin-left: 17.5%;
+        }
+        .de-selection {
+            width: 20%;
+            height: 50px;
+            margin-top: 40px;
+            // margin-left: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid rgb(93, 150, 255);
+            margin-left: 17.5%;
+        }
     }
-    .de-wrap-card {
+    .de-classroom {
         display: flex;
-        margin-left: 200px;
+        flex-direction: column;
+        width: 65%;
+        // margin-bottom: 100px;
+        height: 100vh;
+        .de-wrap-card {
+            display: flex;
+            // margin-left: 20px;
+            margin-top: 30px;
+        }
+        .de-classroom-block {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            padding: 30px;
+        }
     }
 }

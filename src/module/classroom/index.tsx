@@ -57,17 +57,28 @@ export function ClassroomDetail() {
   return (
     <>
       <div className="de-transcript-container">
-        <Row>
-          {role == "1" && <InputFile classroom={transcript?._id as string} />}
-          <Transcript
-            root_transcript={transcript?.root_transcript}
-            teacher_address={transcript?.teacher_address}
-            image={transcript?.image as number}
-            subject={transcript?.subject as string}
-            code={transcript?.code as string}
-            _id={transcript?._id as string}
-          />
-        </Row>
+        <div className="de-transcript-banner">
+          <div className="de-hightlight-link">
+            <div>Classroom</div>
+            <div> {">"} </div>
+            <div> Transcripts</div>
+          </div>
+        </div>
+        <div className="de-transcript">
+          {/* <div className="de-transcript-block"> */}
+          <Row>
+            {role == "1" && <InputFile classroom={transcript?._id as string} />}
+            <Transcript
+              root_transcript={transcript?.root_transcript}
+              teacher_address={transcript?.teacher_address}
+              image={transcript?.image as number}
+              subject={transcript?.subject as string}
+              code={transcript?.code as string}
+              _id={transcript?._id as string}
+            />
+          </Row>
+          {/* </div> */}
+        </div>
       </div>
     </>
   );

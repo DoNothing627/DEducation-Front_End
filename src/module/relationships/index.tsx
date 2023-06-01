@@ -16,6 +16,8 @@ export function Relationship() {
   const [employers, setEmployers] = useState<GetMyRelationShipResponseDTO[]>(
     []
   );
+  const semesterOptions = ["Schools", "Teachers", "Employers"];
+
   // const role = localStorage.getItem("user_role");
 
   useEffect(() => {
@@ -54,39 +56,53 @@ export function Relationship() {
   return (
     <>
       <div className="de-relationship-container">
-        <div className="de-relationship-title">Your School</div>
-        <div className="de-relationship-block">
-          {/* <SchoolCard /> */}
-          {schools != null &&
-            schools.map((school) => (
-              <SchoolCard
-                _id={school._id}
-                username={school.username}
-                wallet={school.wallet}
-              />
+        <div className="de-relationship-banner">
+          <div className="de-hightlight-link">
+            <div>Home</div>
+            <div> {">"} </div>
+            <div> Relationship</div>
+          </div>
+          <select className="de-selection">
+            {semesterOptions.map((e) => (
+              <option value={e}>{e}</option>
             ))}
+          </select>
         </div>
-        <div className="de-relationship-title">Your Teachers</div>
-        <div className="de-relationship-block">
-          {teachers != null &&
-            teachers.map((teacher) => (
-              <TeacherCard
-                _id={teacher._id}
-                username={teacher.username}
-                wallet={teacher.wallet}
-              />
-            ))}
-        </div>
-        <div className="de-relationship-title">Your Employers</div>
-        <div className="de-relationship-block">
-          {employers != null &&
-            employers.map((employer) => (
-              <EmployerCard
-                _id={employer._id}
-                username={employer.username}
-                wallet={employer.wallet}
-              />
-            ))}
+        <div className="de-relationship-wrap">
+          {/* <div className="de-relationship-title">Your School</div>
+          <div className="de-relationship-block">
+            {/* <SchoolCard /> }
+            {schools != null &&
+              schools.map((school) => (
+                <SchoolCard
+                  _id={school._id}
+                  username={school.username}
+                  wallet={school.wallet}
+                />
+              ))}
+          </div>
+          <div className="de-relationship-title">Your Teachers</div>
+          <div className="de-relationship-block">
+            {teachers != null &&
+              teachers.map((teacher) => (
+                <TeacherCard
+                  _id={teacher._id}
+                  username={teacher.username}
+                  wallet={teacher.wallet}
+                />
+              ))}
+          </div>
+          <div className="de-relationship-title">Your Employers</div>
+          <div className="de-relationship-block">
+            {employers != null &&
+              employers.map((employer) => (
+                <EmployerCard
+                  _id={employer._id}
+                  username={employer.username}
+                  wallet={employer.wallet}
+                />
+              ))}
+          </div> */}
         </div>
       </div>
     </>

@@ -1,6 +1,6 @@
 .de-transcript-card {
-    width: 500px;
-    height: 400px;
+    width: 375px;
+    height: 240px;
     // background-color: rgb(255, 255, 255);
     float: left;
     // margin-left: 60px;
@@ -11,12 +11,13 @@
     cursor: pointer;
     .de-image-card {
         border-radius: 8px;
-        height: 280px;
+        height: 180px;
+        width: 375px;
     }
     .field-name-subject {
         font-weight: 800;
         color: #090909;
-        font-size: 30px;
+        font-size: 20px;
         // margin-bottom: 12px;
         &:hover {
             color: rgb(127, 99, 54);
@@ -25,7 +26,7 @@
     .field-name-code {
         font-weight: 200;
         color: #090909;
-        font-size: 15px;
+        font-size: 10px;
         margin-bottom: 12px;
     }
     .field-name-teacher {

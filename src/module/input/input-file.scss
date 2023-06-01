@@ -1,6 +1,6 @@
 .de-input-file {
-    width: 500px;
-    height: 420px;
+    width: 375px;
+    height: 240px;
     display: flex;
     float: left;
     flex-direction: column;
@@ -9,20 +9,20 @@
     margin-bottom: 20px;
     border-radius: 8px;
     .de-transcript-input {
-        width: 500px;
-        height: 280px;
+        width: 375px;
+        height: 180px;
         background-image: url("/assets/images/uploadfile-background.png");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 380px 250px;
+        background-size: 370px 200px;
         border-radius: 8px;
         border: dashed rgb(174, 174, 174);
     }
     .de-input-wrap-button {
         display: flex;
         .de-submit-button {
-            width: 247px;
-            height: 60px;
+            width: 185px;
+            height: 40px;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -32,7 +32,7 @@
             border-radius: 8px;
             border: 2px solid rgb(127, 99, 54);
             cursor: pointer;
-            font-size: 18px;
+            font-size: 12px;
             font-weight: bolder;
             &:hover {
                 background-color: rgb(127, 99, 54);

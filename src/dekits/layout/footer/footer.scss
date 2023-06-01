@@ -1,25 +1,76 @@
 .auth-wrap {
     width: 100vw;
-    height: 200px;
+    height: 230px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgb(127, 99, 54);
+    background-color: rgb(255, 255, 255);
     // position: absolute;
     bottom: 0;
-    .auth-footer {
-        width: 1240px;
-        height: 100px;
+    .de-auth-row {
         display: flex;
-        justify-content: space-between;
-        .de-footer-column {
-            height: 100px;
+        width: 1240px;
+        height: 200px;
+        .de-auth-first-row {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            margin-top: 30px;
-            color: rgb(255, 255, 255);
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-top: 20px;
+            flex: 1;
+            .de-logo-wrap {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .de-logo {
+                    width: 70px;
+                }
+                .de-headline {
+                    color: red;
+                    font-size: 20px;
+                    font-weight: 800;
+                    float: left;
+                }
+            }
+            .de-normalline {
+                font-size: 15px;
+                font-weight: 100;
+            }
+            .de-icon-links{
+                display: flex;
+            }
         }
+        .auth-footer {
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            .de-footer-column {
+                height: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-top: 30px;
+                color: rgb(7, 7, 7);
+                .de-headline {
+                    color: red;
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+                .de-normalline {
+                    font-size: 15px;
+                    font-weight: 100;
+                }
+            }
+        }
+    }
+    .de-footer-end {
+        width: 100vw;
+        height: 30px;
+        background-color: rgb(32, 32, 32);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

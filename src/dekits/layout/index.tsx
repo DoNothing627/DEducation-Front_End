@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Footer } from "./footer";
 import { Header } from "./header";
+import { IconBackground } from "./iconbackground";
 
 interface LayoutProps {
   children:
@@ -21,6 +22,7 @@ export function Layout(props: LayoutProps) {
   return (
     <>
       {pathname == "/auth" || <Header />}
+      {pathname == "/auth" || <IconBackground />}
       <main>{props.children}</main>
       {pathname == "/auth" || <Footer />}
     </>

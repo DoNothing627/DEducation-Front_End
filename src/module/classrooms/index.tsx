@@ -28,34 +28,46 @@ export function Classroom() {
 
   return (
     <>
-      <div className="de-classroom">
-        {/* {classrooms != null &&
-        classrooms.map((classroom) => {
-            <ClassroomCard />;
-        })} */}
-
-        {/* <Select className="de-selection" /> */}
-        <select className="de-selection">
-          {semesterOptions.map((e) => (
-            <option value={e}>{e}</option>
-          ))}
-        </select>
-        <div className="de-wrap-card">
-          <Row>
-            <AddClassroomCard />
-            {classrooms != null &&
-              classrooms.map((classroom) => (
-                <ClassroomCard
-                  _id={classroom._id}
-                  subject={classroom.subject}
-                  code={classroom.code}
-                  image={classroom.image}
-                  teacher_name={classroom?.teacher_name}
-                  teacher_wallet={classroom?.teacher_wallet}
-                />
-              ))}
-          </Row>
+      <div className="de-classroom-container">
+        {/* <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/home-v2/new-banner-list-courses.png" className="de-classroom-banner"/> */}
+        <div className="de-classroom-banner">
+          <div className="de-hightlight-link">
+            <div>Home</div>
+            <div> {">"} </div>
+            <div> Classroom</div>
+          </div>
+          <select className="de-selection">
+            {semesterOptions.map((e) => (
+              <option value={e}>{e}</option>
+            ))}
+          </select>
         </div>
+        <div className="de-classroom">
+          {/* {classrooms != null &&
+        classrooms.map((classroom) => {
+          <ClassroomCard />;
+        })} */}
+          {/* <div className="de-classroom-block"> */}
+          {/* <Select className="de-selection" /> */}
+
+          <div className="de-wrap-card">
+            <Row>
+              {/* <AddClassroomCard /> */}
+              {classrooms != null &&
+                classrooms.map((classroom) => (
+                  <ClassroomCard
+                    _id={classroom._id}
+                    subject={classroom.subject}
+                    code={classroom.code}
+                    image={classroom.image}
+                    teacher_name={classroom?.teacher_name}
+                    teacher_wallet={classroom?.teacher_wallet}
+                  />
+                ))}
+            </Row>
+          </div>
+        </div>
+        {/* </div> */}
       </div>
     </>
   );

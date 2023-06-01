@@ -1,2 +1,2 @@
 export const DEducationContractAddress =
-  "0xF38290025C4067a06C993810364fAabC7fb5c0ef";
+  "0x7e72a13eD5C4eBfE769E9496bF87E13Eea61Eca5";

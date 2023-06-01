@@ -18,6 +18,7 @@ export const defaultHustLogo = "/assets/images/logo-hust.png";
 export const defaultWinnerBagde = "/assets/images/pngwing.com.png";
 export const defaultExcenllentBagde = "/assets/images/excenllent.png";
 export const defaultPlusSign = "/assets/images/plus-sign.png";
+export const defaultFrame = "/assets/images/frame.png";
 export const classAIBanner = "/assets/images/class-ai.jpg";
 export const classBlockchainBanner = "/assets/images/class-blockchain.jpg";
 export const classIoTBanner = "/assets/images/class-iot.jpg";
