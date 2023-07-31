@@ -174,28 +174,28 @@ function SocketsProvider(props: any) {
     console.debug(`reconnect`);
   }, []);
 
-  const handleUserBan = useCallback(
-    ({ message, user_id, ban, reason }: any) => {
-      let ban_message = message;
-      if (user_id === userInfo?.user_id) {
-        if (ban) {
-          ban_message = `You got banned from chat with reason: ${reason}.`;
-        } else {
-          ban_message = `You got unbanned from chat`;
-        }
-        setAbleToChat(!ban);
-      }
-      const data = [
-        {
-          id: "ERROR",
-          message_type: MessageType.SYSTEM,
-          message: ban_message,
-        },
-      ];
-      setMessages((messages: any[]) => [...messages, ...data]);
-    },
-    [userInfo?.user_id]
-  );
+  // const handleUserBan = useCallback(
+  //   ({ message, user_id, ban, reason }: any) => {
+  //     let ban_message = message;
+  //     if (user_id === userInfo?.user_id) {
+  //       if (ban) {
+  //         ban_message = `You got banned from chat with reason: ${reason}.`;
+  //       } else {
+  //         ban_message = `You got unbanned from chat`;
+  //       }
+  //       setAbleToChat(!ban);
+  //     }
+  //     const data = [
+  //       {
+  //         id: "ERROR",
+  //         message_type: MessageType.SYSTEM,
+  //         message: ban_message,
+  //       },
+  //     ];
+  //     setMessages((messages: any[]) => [...messages, ...data]);
+  //   },
+  //   [userInfo?.user_id]
+  // );
   const handleInvalidChannel = useCallback(() => {
     const data = [
       {
@@ -353,8 +353,8 @@ function SocketsProvider(props: any) {
         EVENTS.REGISTERED_EVENTS.SERVER.HISTORY_MESSAGES,
         handleHistoryMessage
       );
-      socket.on(EVENTS.REGISTERED_EVENTS.SERVER.USER_BAN, handleUserBan);
-      socket.on(EVENTS.REGISTERED_EVENTS.SERVER.USER_UNBAN, handleUserBan);
+      // socket.on(EVENTS.REGISTERED_EVENTS.SERVER.USER_BAN, handleUserBan);
+      // socket.on(EVENTS.REGISTERED_EVENTS.SERVER.USER_UNBAN, handleUserBan);
       socket.on(
         EVENTS.REGISTERED_EVENTS.SERVER.INVALID_CHANNEL,
         handleInvalidChannel
@@ -408,7 +408,7 @@ function SocketsProvider(props: any) {
           EVENTS.REGISTERED_EVENTS.SERVER.HISTORY_MESSAGES,
           handleHistoryMessage
         );
-        socket.off(EVENTS.REGISTERED_EVENTS.SERVER.USER_BAN, handleUserBan);
+        // socket.off(EVENTS.REGISTERED_EVENTS.SERVER.USER_BAN, handleUserBan);
         socket.off(
           EVENTS.REGISTERED_EVENTS.SERVER.INVALID_CHANNEL,
           handleInvalidChannel

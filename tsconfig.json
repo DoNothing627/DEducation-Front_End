@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     "src/dekits/ipfs/index.js"
-  ],
+, "src/pdf-generate/generate-graduate-certificate.js"  ],
   "exclude": [
     "node_modules"
   ]

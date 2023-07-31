@@ -2,6 +2,7 @@ import { API_END_POINT } from "@app/const/common.const";
 import { Http } from "@app/services/http";
 
 export interface MyProfile {
+  id: string;
   wallet: string;
   username: string;
   date_of_birth: string;

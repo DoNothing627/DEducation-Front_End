@@ -6,7 +6,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 export function Footer() {
   return (
-    <div className="auth-wrap">
+    <div className="auth-footer-wrap">
       <div className="de-auth-row">
         <div className="de-auth-first-row">
           <div className="de-logo-wrap">

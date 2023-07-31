@@ -7,17 +7,20 @@ export interface GetMyTranscriptsForTeacherRequestDTO {
 
 export interface GetMyTranscriptsForTeacherResponseDTO {
   root_transcript?: string;
-  teacher_address?: string;
+  student_address?: string;
+  student_name?: string;
   image: number;
   subject: string;
   code: string;
+  mark: string;
   _id: string;
+  tx_hash: string;
 }
 
 export function getMyTranscriptsForTeacher(
   params: GetMyTranscriptsForTeacherRequestDTO
 ) {
-  return Http.request<GetMyTranscriptsForTeacherResponseDTO>({
+  return Http.request<GetMyTranscriptsForTeacherResponseDTO[]>({
     method: "GET",
     url: `${API_END_POINT}/academy-transcript/teacher?classroom=${params.classroom}`,
   });

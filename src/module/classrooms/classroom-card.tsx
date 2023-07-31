@@ -25,8 +25,8 @@ export function ClassroomCard(props: GetMyClassroomResponseDTO) {
         <img className="de-image-card" src={classImage} />
         <div className="field-name-subject">{props.subject}</div>
         <div className="field-name-code">{props.code}</div>
-        <div className="field-name-teacher">{props?.teacher_name}</div>
-        <div className="field-name-wallet">{props?.teacher_wallet}</div>
+        {/* <div className="field-name-teacher">{props?.teacher_name}</div> */}
+        {/* <div className="field-name-wallet">{props?.teacher_wallet}</div> */}
       </div>
     </>
   );

@@ -12,7 +12,7 @@ import {
 
 export function Classroom() {
   const [classrooms, setClassrooms] = useState<GetMyClassroomResponseDTO[]>([]);
-  const semesterOptions = [2021.1, 2021.2, 2022.1];
+  const semesterOptions = [2022.2];
 
   useEffect(() => {
     var getMyClassroomRequestDTO: GetMyClassroomRequestDTO = {

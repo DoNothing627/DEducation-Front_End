@@ -49,7 +49,10 @@ export function SessionContainer(props: SessionContainerProps) {
       if (userInfo && !isForceUpdate) return;
 
       myProfile().subscribe({
-        next: (res: any) => setUserInfo(res.data),
+        next: (res: any) => {
+          setUserInfo(res.data),
+          console.log("setUserInfo", res.data);
+        },
         error: handleError(),
       });
     },

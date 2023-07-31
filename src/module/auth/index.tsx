@@ -12,6 +12,7 @@ import { handleError } from "@app/dekits/error-handler";
 import { verifySignature } from "@app/api/auth/verify-signature";
 import { getAccessToken, saveUserCredential } from "@app/services/auth";
 import { useRouter } from "next/router";
+import { useSession } from "@app/hooks/session";
 
 export function Auth() {
   // const [nonceRequestDTO, setNonceRequestDTO] = useState<NonceRequestDTO>(
@@ -19,11 +20,20 @@ export function Auth() {
   // );
   const [signer, setSigner] = useState<ethers.providers.JsonRpcSigner>();
   const router = useRouter();
+  const { isLoggedIn, userInfo } = useSession();
+
   var nonceRequestDTO: NonceRequestDTO;
 
   useEffect(() => {
     if (getAccessToken()) router.push("/home");
   });
+
+  useEffect(() => {
+    console.log("session", isLoggedIn, userInfo);
+    if (isLoggedIn) {
+      router.back();
+    }
+  }, [isLoggedIn, router]);
 
   const getAddress = async () => {
     try {
@@ -57,7 +67,9 @@ export function Auth() {
           saveUserCredential(res.data.token);
           localStorage.setItem("user_role", res.data.role);
           localStorage.setItem("wallet", res.data.wallet);
-          router.push("/home");
+          // router.push("/");
+          // window.location.href = `${(router.query.prev as string) || "/"}`;
+          window.location.href = "/";
         });
       } catch (err) {
         handleError()(err);

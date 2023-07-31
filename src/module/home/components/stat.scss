@@ -76,7 +76,7 @@
                     .de-detail-block {
                         font-weight: 100;
                     }
-                    .de-wallet-address{
+                    .de-wallet-address {
                         cursor: pointer;
                     }
                     .de-wallet-address .tooltiptext {
@@ -87,15 +87,20 @@
                         text-align: center;
                         border-radius: 6px;
                         padding: 5px 0;
-                      
+
                         /* Position the tooltip */
                         position: absolute;
                         z-index: 1;
-                      }
-                      
-                      .de-wallet-address:hover .tooltiptext {
+                    }
+
+                    .de-wallet-address:hover .tooltiptext {
                         visibility: visible;
-                      }
+                    }
+                    .de-certificate {
+                        font-size: 15px;
+                        font-weight: 200;
+                        cursor: pointer;
+                    }
                 }
             }
             .de-side-info {
@@ -122,7 +127,7 @@
                             cursor: pointer;
                         }
                     }
-                    .de-class-list{
+                    .de-class-list {
                         display: flex;
                         margin-top: 20px;
                     }
@@ -132,6 +137,30 @@
                     height: 21%;
                     background-color: white;
                     margin-bottom: 30px;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    .de-school-logo {
+                        height: 90%;
+                        margin-left: 20px;
+                        margin-top: 10px;
+                    }
+                    .de-school-info {
+                        margin-left: 30px;
+                        margin-top: 15px;
+                        .de-school-title {
+                            font-size: 20px;
+                            font-weight: 600;
+                        }
+                        .de-school-code {
+                            font-size: 15px;
+                            font-weight: 200;
+                        }
+                        .de-school-address {
+                            font-size: 15px;
+                            font-weight: 200;
+                        }
+                    }
                 }
                 .de-discussion-block {
                     width: 100%;

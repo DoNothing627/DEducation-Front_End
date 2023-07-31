@@ -3,7 +3,17 @@ import { Http } from "@app/services/http";
 import { TranscriptStudent } from "@app/smart-contract/add-new-transcript-for-students";
 
 export interface UploadStudentTranscriptRequestDTO {
-  transcriptStudents: TranscriptStudent[];
+  transcriptStudents: TranscriptStudentForBE[];
+  classroom_id: String;
+}
+
+export interface TranscriptStudentForBE {
+  name: string;
+  // supervisorName: string;
+  // subject: string;
+  mark: string;
+  student_id_code: string;
+  // class: string;
 }
 
 export function uploadStudentTranscript(
@@ -15,3 +25,4 @@ export function uploadStudentTranscript(
     body: data,
   });
 }
+

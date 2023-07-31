@@ -11,10 +11,18 @@ import { getTranscriptForStudent } from "@app/smart-contract/get-transcript-for-
 import { ethers } from "ethers";
 import { useRouter } from "next/router";
 import "./index.scss";
+import { useEffect, useState } from "react";
+import { useSession } from "@app/hooks/session";
 
 export function Transcript(props: GetMyTranscriptsForTeacherResponseDTO) {
   const router = useRouter();
-  const role = localStorage.getItem("user_role");
+  // const [role, setRole] = useState("");
+  const {userInfo}= useSession();
+
+  // useEffect(() => {
+  //   setRole(localStorage.getItem("user_role") as string);
+  //   // console.log("role", role);
+  // });
 
   var classImage;
   if (props.image == 1) classImage = classBlockchainBanner;
@@ -33,11 +41,11 @@ export function Transcript(props: GetMyTranscriptsForTeacherResponseDTO) {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner();
     const addr = await signer.getAddress();
-    if (role == "1") {
+    if (userInfo?.role == "1") {
       var root_transcript = await getTranscriptForClass(addr, props._id);
       window.open(`https://ipfs.io/ipfs/${root_transcript}`);
     }
-    if (role == "2") {
+    if (userInfo?.role == "2") {
       root_transcript = props.root_transcript as string;
       window.open(`https://ipfs.io/ipfs/${root_transcript}`);
     }

@@ -1,0 +1,64 @@
+.de-loading-container {
+    backdrop-filter: blur(10px);
+    // background-color: rbg(0, 0, 0, 0.48);
+    background-color: rgba(0, 0, 0, 0.48);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    z-index: 10;
+    .spinner {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        margin: 200px auto;
+        z-index: 100;
+    }
+
+    .double-bounce1,
+    .double-bounce2 {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #444444;
+        opacity: 0.6;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+
+        -webkit-animation: sk-bounce 2s infinite ease-in-out;
+        animation: sk-bounce 2s infinite ease-in-out;
+    }
+
+    .double-bounce2 {
+        -webkit-animation-delay: -1s;
+        animation-delay: -1s;
+    }
+
+    @-webkit-keyframes sk-bounce {
+        0%,
+        100% {
+            -webkit-transform: scale(0);
+        }
+        50% {
+            -webkit-transform: scale(1);
+        }
+    }
+
+    @keyframes sk-bounce {
+        0%,
+        100% {
+            transform: scale(0);
+            -webkit-transform: scale(0);
+        }
+        50% {
+            transform: scale(1);
+            -webkit-transform: scale(1);
+        }
+    }
+}

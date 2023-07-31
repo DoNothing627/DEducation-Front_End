@@ -16,7 +16,7 @@ export async function getTranscriptForStudent(
   );
 
   return DEducation.TranscriptForStudents(
-    teacher_address,
+    '0x31170fB6208D8A46052F15f0BFCf6e52b620a86c',
     student_address,
     classroom
   );
